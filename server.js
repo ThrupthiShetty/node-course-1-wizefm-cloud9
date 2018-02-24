@@ -1,6 +1,7 @@
 const express = require("express")
 const fs = require("fs")
 const hbs = require("hbs")
+const port = process.env.PORT || 3000;
 var app = express();
 
 //handlebars
@@ -83,7 +84,7 @@ app.get('/bad',(req,res) =>{
 
 
 //render will allowe use to set up any engie here it is current engine
-app.listen(3000,() =>{
-    console.log("server is up and running on port 3000")
+app.listen(port,() =>{
+    console.log(`server is up and running on port ${port}`)
 
 })
